@@ -1,34 +1,49 @@
 {
-  "name": "bull_and_cows",
+  "name": "bulls_and_cows",
+  "main": "expo-router/entry",
   "version": "1.0.0",
-  "description": "bull and cows game",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "expo start",
+    "reset-project": "node ./scripts/reset-project.js",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest --watchAll",
+    "lint": "expo lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/basierraferrer/bull_and_cows.git"
+  "jest": {
+    "preset": "jest-expo"
   },
-  "keywords": [
-    "rxjs",
-    "typescript"
-  ],
-  "author": "basierraferrer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/basierraferrer/bull_and_cows/issues"
-  },
-  "homepage": "https://github.com/basierraferrer/bull_and_cows#readme",
   "dependencies": {
-    "rxjs": "^7.8.1",
-    "typescript": "^5.3.2",
-    "webpack": "^5.89.0",
-    "webpack-dev-server": "^4.15.1"
+    "@expo/vector-icons": "^14.0.2",
+    "@react-navigation/native": "^6.0.2",
+    "expo": "~51.0.17",
+    "expo-constants": "~16.0.2",
+    "expo-font": "~12.0.7",
+    "expo-linking": "~6.3.1",
+    "expo-router": "~3.5.17",
+    "expo-splash-screen": "~0.27.5",
+    "expo-status-bar": "~1.12.1",
+    "expo-system-ui": "~3.0.6",
+    "expo-web-browser": "~13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.2",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-reanimated": "~3.10.1",
+    "react-native-safe-area-context": "4.10.1",
+    "react-native-screens": "3.31.1",
+    "react-native-web": "~0.19.10"
   },
   "devDependencies": {
-    "ts-loader": "^9.5.1",
-    "webpack-cli": "^5.1.4"
-  }
+    "@babel/core": "^7.20.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "~18.2.45",
+    "@types/react-test-renderer": "^18.0.7",
+    "jest": "^29.2.1",
+    "jest-expo": "~51.0.3",
+    "react-test-renderer": "18.2.0",
+    "typescript": "~5.3.3"
+  },
+  "private": true
 }
